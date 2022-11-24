@@ -12,12 +12,12 @@ body {
 }
 
 header,
-    footer {
+footer {
     background: #e9ecef;
 }
 
 .jumbotron {
-    margin-bottom:0;
+    margin-bottom: 0;
 }
 
 footer {
@@ -32,91 +32,99 @@ footer {
 }
 
 .sender-info {
-  font-size: 10px;
-  margin-top: -5px;
-  color:grey;
+    font-size: 10px;
+    margin-top: -5px;
+    color: grey;
 }
 
 .messages {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .message {
-  border-radius: 20px;
-  padding: 8px 15px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  display: inline-block;
+    border-radius: 20px;
+    padding: 8px 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
 }
 
 .yours {
-  align-items: flex-start;
+    align-items: flex-start;
 }
 
-.yours .message {
-  margin-right: 25%;
-  background-color: #eee;
-  position: relative;
-}
+    .yours .message {
+        margin-right: 25%;
+        background-color: #eee;
+        position: relative;
+    }
 
-.yours .message:before {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  bottom: 0;
-  left: -7px;
-  height: 20px;
-  width: 20px;
-  background: #eee;
-  border-bottom-right-radius: 15px;
-}
+        .yours .message:before {
+            content: "";
+            position: absolute;
+            z-index: 0;
+            bottom: 0;
+            left: -7px;
+            height: 20px;
+            width: 20px;
+            background: #eee;
+            border-bottom-right-radius: 15px;
+        }
 
-.yours .message:after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
-  left: -10px;
-  width: 10px;
-  height: 20px;
-  background: white;
-  border-bottom-right-radius: 10px;
-}
+        .yours .message:after {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            left: -10px;
+            width: 10px;
+            height: 20px;
+            background: white;
+            border-bottom-right-radius: 10px;
+        }
 
 .mine {
-  align-items: flex-end;
+    align-items: flex-end;
 }
 
-.mine .message {
-  color: white;
-  margin-left: 25%;
-  background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
-  background-attachment: fixed;
-  position: relative;
-}
+    .mine .message {
+        color: white;
+        margin-left: 25%;
+        background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
+        background-attachment: fixed;
+        position: relative;
+    }
 
-.mine .message:before {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  bottom: 0;
-  right: -8px;
-  height: 20px;
-  width: 20px;
-  background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
-  background-attachment: fixed;
-  border-bottom-left-radius: 15px;
-}
+        .mine .message:before {
+            content: "";
+            position: absolute;
+            z-index: 0;
+            bottom: 0;
+            right: -8px;
+            height: 20px;
+            width: 20px;
+            background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
+            background-attachment: fixed;
+            border-bottom-left-radius: 15px;
+        }
 
-.mine .message:after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
-  right: -10px;
-  width: 10px;
-  height: 20px;
-  background: white;
-  border-bottom-left-radius: 10px;
-}
+        .mine .message:after {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            right: -10px;
+            width: 10px;
+            height: 20px;
+            background: white;
+            border-bottom-left-radius: 10px;
+        }
+
+const nameInput = document.getElementById("myName");
+const myMessage = document.getElementById("myMessage");
+const sendButton = document.getElementById("sendButton");
+const chatBox = document.getElementById("chat");
+
+function updateMessages() {
+    // Fetch Messages // Loop over the messages. Inside the loop we will // get each message // format it // add it to the chatbox
