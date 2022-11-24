@@ -16,7 +16,7 @@ how many points out of 20 do you deserve on this assignment: 20/20
 This assignment took me a bit longer due to my ocurse workload. I am currently at 18 CH. This is no excuse, but I value the fact I can take my time and submit the assignment at my pace. Dee
 
 ### How long it took me to finish this?
-3 weeks
+3 weeks for the chatting part 1 and a few hours for localstorage 
 
 
 ## Discussion Questions:
